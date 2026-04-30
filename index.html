@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>الخطابة أم عبد الله</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
     <style>
         * {
             margin: 0;
@@ -18,7 +17,7 @@
             background-color: #f5f0e8;
             color: #333;
             line-height: 1.8;
-            font-size: 18px; /* 👈 تكبير الخط الأساسي */
+            font-size: 18px; /* 👈 تكبير عام بسيط */
         }
 
         /* Header */
@@ -26,39 +25,39 @@
             background-color: #5a4a3a;
             color: white;
             text-align: center;
-            padding: 45px 20px;
+            padding: 40px 20px;
             position: relative;
         }
 
         .header h1 {
-            font-size: 2.6rem; /* 👈 أكبر شوي */
+            font-size: 2.6rem; /* 👈 تكبير */
             margin-bottom: 10px;
             font-weight: bold;
         }
 
         .header p {
-            font-size: 1.1rem;
+            font-size: 1.2rem; /* 👈 تكبير بسيط */
             opacity: 0.9;
         }
 
         /* Navigation */
         .nav {
             background-color: #f5f0e8;
-            padding: 18px;
+            padding: 15px;
             text-align: center;
             border-bottom: 3px solid #c4a35a;
         }
 
         .nav a {
             display: inline-block;
-            margin: 6px 10px;
+            margin: 5px 10px;
             padding: 10px 22px;
             text-decoration: none;
             color: #2c5f5f;
             font-weight: bold;
             border-radius: 5px;
             transition: all 0.3s;
-            font-size: 1.05rem;
+            font-size: 1.1rem; /* 👈 تكبير */
         }
 
         .nav a:hover {
@@ -84,13 +83,13 @@
         .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 25px;
+            padding: 20px;
         }
 
         .card {
             background-color: white;
             border-radius: 10px;
-            padding: 35px;
+            padding: 30px;
             margin-bottom: 20px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
             border-right: 4px solid #2c5f5f;
@@ -109,31 +108,35 @@
             color: #555;
             margin-bottom: 15px;
             text-align: justify;
-            font-size: 1.1rem;
+            font-size: 1.15rem; /* 👈 تكبير */
         }
 
         .card ul li {
-            padding: 10px 0;
+            padding: 8px 0;
             color: #555;
             position: relative;
             padding-right: 25px;
-            font-size: 1.05rem;
+            font-size: 1.1rem; /* 👈 تكبير */
         }
 
         .contact-link {
             display: inline-block;
             background-color: #c4a35a;
             color: white;
-            padding: 12px 28px;
+            padding: 10px 25px;
             border-radius: 5px;
             text-decoration: none;
             margin-top: 10px;
             transition: background-color 0.3s;
-            font-size: 1.05rem;
+            font-size: 1.1rem; /* 👈 تكبير */
         }
 
         .contact-link:hover {
             background-color: #a88b4a;
+        }
+
+        .contact-link i {
+            margin-left: 5px;
         }
 
         /* Footer */
@@ -141,12 +144,12 @@
             background-color: #3a3a3a;
             color: #aaa;
             text-align: center;
-            padding: 25px;
+            padding: 20px;
             margin-top: 30px;
             font-size: 1rem;
         }
 
-        /* WhatsApp */
+        /* WhatsApp Float Button */
         .whatsapp-float {
             position: fixed;
             bottom: 30px;
@@ -161,6 +164,15 @@
             font-size: 30px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.3);
             z-index: 1000;
+            transition: transform 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         @media (max-width: 600px) {
@@ -168,62 +180,95 @@
                 font-size: 2rem;
             }
 
+            .nav a {
+                display: block;
+                margin: 5px auto;
+                width: 80%;
+            }
+
             .card {
-                padding: 22px;
+                padding: 20px;
+            }
+
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                font-size: 25px;
+                bottom: 20px;
+                left: 20px;
             }
         }
     </style>
 </head>
-
 <body>
 
-<header class="header">
-    <h1>الخطابة أم عبد الله</h1>
-    <p>نساعدك في إيجاد شريك الحياة بكل خصوصية وأمان</p>
-</header>
+    <!-- Header -->
+    <header class="header">
+        <h1>الخطابة أم عبد الله</h1>
+        <p>نساعدك في إيجاد شريك الحياة بكل خصوصية وأمان</p>
+    </header>
 
-<nav class="nav">
-    <a href="#about" class="active">عن الموقع</a>
-    <a href="#privacy">الخصوصية</a>
-    <a href="#terms">الشروط</a>
-    <a href="https://wa.me/" class="contact-btn" target="_blank">
-        <i class="fab fa-whatsapp"></i> تواصل معنا
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="#about" class="active">عن الموقع</a>
+        <a href="#privacy">الخصوصية</a>
+        <a href="#terms">الشروط</a>
+        <a href="https://wa.me/" class="contact-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i> تواصل معنا
+        </a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+
+        <!-- About Section -->
+        <section id="about" class="card">
+            <h2>عن الموقع</h2>
+            <p>
+                هذه المنصة مخصصة للراغبين في الزواج الجاد فقط، وفق القيم والأخلاق. لا نقبل أي نوع من العلاقات غير الجادة، ولا توجد دردشات مفتوحة أو محتوى ترفيهي.
+            </p>
+            <a href="https://wa.me/" class="contact-link" target="_blank">
+                <i class="fab fa-whatsapp"></i> تواصل معنا
+            </a>
+        </section>
+
+        <!-- Privacy Section -->
+        <section id="privacy" class="card">
+            <h2>سياسة الخصوصية</h2>
+            <p>
+                نلتزم بالحفاظ على خصوصية جميع المستخدمين. لا يتم مشاركة أي بيانات شخصية مع أطراف خارجية. جميع المعلومات محفوظة بشكل آمن وتستخدم فقط لتسهيل عملية التوفيق بين الطرفين.
+            </p>
+            <a href="https://wa.me/" class="contact-link" target="_blank">
+                <i class="fab fa-whatsapp"></i> تواصل معنا
+            </a>
+        </section>
+
+        <!-- Terms Section -->
+        <section id="terms" class="card">
+            <h2>الشروط والأحكام</h2>
+            <ul>
+                <li>الموقع مخصص فقط للباحثين عن الزواج الجاد.</li>
+                <li>يُمنع استخدام المنصة لأي غرض آخر غير شرعي أو ترفيهي.</li>
+                <li>نحتفظ بحق حذف أي حساب ينتهك القواعد أو يسيء الاستخدام.</li>
+                <li>باستخدامك للمنصة، فإنك توافق على الشروط وسياسة الخصوصية.</li>
+            </ul>
+            <a href="https://wa.me/" class="contact-link" target="_blank">
+                <i class="fab fa-whatsapp"></i> تواصل معنا
+            </a>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2026 جميع الحقوق محفوظة | الخطابة أم عبد الله</p>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
     </a>
-</nav>
-
-<div class="container">
-
-    <section id="about" class="card">
-        <h2>عن الموقع</h2>
-        <p>هذه المنصة مخصصة للراغبين في الزواج الجاد فقط، وفق القيم والأخلاق.</p>
-        <a class="contact-link" href="https://wa.me/" target="_blank">تواصل معنا</a>
-    </section>
-
-    <section id="privacy" class="card">
-        <h2>الخصوصية</h2>
-        <p>نحافظ على سرية بيانات المستخدمين بالكامل.</p>
-        <a class="contact-link" href="https://wa.me/" target="_blank">تواصل معنا</a>
-    </section>
-
-    <section id="terms" class="card">
-        <h2>الشروط</h2>
-        <ul>
-            <li>للاستخدام الجاد فقط</li>
-            <li>يمنع أي استخدام غير مناسب</li>
-            <li>نحذف أي حساب مخالف</li>
-        </ul>
-        <a class="contact-link" href="https://wa.me/" target="_blank">تواصل معنا</a>
-    </section>
-
-</div>
-
-<footer class="footer">
-    © 2026 جميع الحقوق محفوظة
-</footer>
-
-<a class="whatsapp-float" href="https://wa.me/" target="_blank">
-    <i class="fab fa-whatsapp"></i>
-</a>
 
 </body>
 </html>
